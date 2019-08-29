@@ -13,18 +13,18 @@
       </div>
     </div>
     <div class="header-bar-top"/>
-    <div class="header-bar nav-bar">
-      <div class="container">
-        <div class="header-bar-inner">
-          <div class="title is-5 is-uppercase is-marginless login-left">
-            <span class="is-hidden-mobile">Some project name</span>
-            <span class="is-hidden-tablet is-hidden-desktop">Project short</span>
-            <a class="title is-5 is-medium is-capitalized is-marginless">Some nav</a>
-            <a class="title is-5 is-medium is-capitalized">Other nav</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--    <div class="header-bar nav-bar">-->
+<!--      <div class="container">-->
+<!--        <div class="header-bar-inner">-->
+<!--          <div class="title is-5 is-uppercase is-marginless login-left">-->
+<!--            <span class="is-hidden-mobile">Some project name</span>-->
+<!--            <span class="is-hidden-tablet is-hidden-desktop">Project short</span>-->
+<!--            <a class="title is-5 is-medium is-capitalized is-marginless">Some nav</a>-->
+<!--            <a class="title is-5 is-medium is-capitalized">Other nav</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
 </template>
 
