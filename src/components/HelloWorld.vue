@@ -1,7 +1,6 @@
 <template>
     <div class="posts">
-      <b-loading :active.sync="loading"/>
-      <h1 class="header">Request using Axios</h1>
+      <h1 class="header">Request using Fetch</h1>
       <div class="card"
            v-for="post in posts"
            :key="post.id"

@@ -1,5 +1,4 @@
 import {Module} from 'vuex';
-import axios from 'axios';
 import {SET_POSTS} from './mutation-types';
 import {IPost} from "@/shared/interfaces/IPost";
 import {FETCH_POSTS} from "@/store/posts/action-types";
@@ -15,13 +14,12 @@ const postState: Module<IPostState, {}> = {
   },
   actions: {
     [FETCH_POSTS]({commit}) {
-      axios
-        .get('https://jsonplaceholder.typicode.com/posts')
-        .then(res => this.posts = res.data)
+      fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(res => res.json())
         .then(posts => {
           commit('SET_POSTS', posts)
         })
-        .catch(error => console.log('Error: ', error));
+        .catch((err) => console.log(err))
     }
   },
   mutations: {
