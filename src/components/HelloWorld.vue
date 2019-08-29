@@ -22,19 +22,23 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapState, mapGetters } from 'vuex'
-import {GET_LOADING_STATE} from '../loading/getter-types';
+import { mapGetters } from 'vuex'
+import {GET_LOADING_STATE} from '../store/loading/getter-types';
+import {FETCH_POSTS} from "@/store/posts/action-types";
+import {POSTS} from "@/store/posts/getter-types";
 
 export default Vue.extend({
   props: {
     msg: String
   },
-  mounted () {
-    this.$store.dispatch('loadPosts')
+  created () {
+    this.$store.dispatch(FETCH_POSTS);
   },
   computed: {
-    ...mapState (['posts']),
-    ...mapGetters({ loading: GET_LOADING_STATE })
+    ...mapGetters({
+      loading: GET_LOADING_STATE,
+      posts: POSTS
+    })
   }
 });
 </script>
