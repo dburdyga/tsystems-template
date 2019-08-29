@@ -22,28 +22,19 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import axios from 'axios';
-import {mapGetters} from 'vuex';
+import { mapState, mapGetters } from 'vuex'
 import {GET_LOADING_STATE} from '../loading/getter-types';
 
 export default Vue.extend({
   props: {
     msg: String
   },
-  data() {
-    return {
-      posts: []
-    };
+  mounted () {
+    this.$store.dispatch('loadPosts')
   },
   computed: {
-    ...mapGetters({
-      loading: GET_LOADING_STATE
-    })
-  },
-  created() {
-    axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then (res => this.posts = res.data)
-      .catch (error => console.log('Error: ', error));
+    ...mapState (['posts']),
+    ...mapGetters({ loading: GET_LOADING_STATE })
   }
 });
 </script>
