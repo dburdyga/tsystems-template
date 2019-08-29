@@ -1,8 +1,8 @@
 import {Module} from 'vuex';
 import {SET_POSTS} from './mutation-types';
-import {IPost} from "@/shared/interfaces/IPost";
-import {FETCH_POSTS} from "@/store/posts/action-types";
-import {POSTS} from "@/store/posts/getter-types";
+import {IPost} from '@/shared/interfaces/IPost';
+import {FETCH_POSTS} from '@/store/posts/action-types';
+import {POSTS} from '@/store/posts/getter-types';
 
 interface IPostState {
   posts: IPost[];
