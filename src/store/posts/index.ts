@@ -16,10 +16,8 @@ const postState: Module<IPostState, {}> = {
     [FETCH_POSTS]({commit}) {
       return fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
-        .then(posts =>
-          commit('SET_POSTS', posts))
-        .catch((err) =>
-          console.log(err))
+        .then(posts => commit('SET_POSTS', posts))
+        .catch((err) => console.log(err))
     }
   },
   mutations: {
