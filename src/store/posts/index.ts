@@ -14,17 +14,12 @@ const postState: Module<IPostState, {}> = {
   },
   actions: {
     [FETCH_POSTS]({commit}) {
-      const self = this;
-      fetch('https://jsonplaceholder.typicode.com/posts')
+      return fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
-        .then(posts => {
-          commit('SET_POSTS', posts);
-          self.loading = false;
-        })
-        .catch((err) => {
-          console.log(err);
-          self.loading = false;
-        })
+        .then(posts =>
+          commit('SET_POSTS', posts))
+        .catch((err) =>
+          console.log(err))
     }
   },
   mutations: {

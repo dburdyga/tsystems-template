@@ -1,7 +1,7 @@
 <template>
     <div class="posts">
-      <p class="loading" v-if="loading">LOADING...</p>
       <h1 class="header">Request using Fetch</h1>
+      <p class="loading" v-if="loading"></p>
       <div class="card"
            v-for="post in posts"
            :key="post.id"
@@ -29,13 +29,14 @@ import {POSTS} from '@/store/posts/getter-types';
 export default Vue.extend({
   data() {
     return {
-      loading: true
+      loading: false
     }
   },
   created () {
+    this.loading = true;
     this.$store.dispatch(FETCH_POSTS)
-      .then(()=> {}
-      )
+      .then(() => this.loading = false)
+      .catch(() => this.loading = false)
   },
   computed: {
     ...mapGetters({
@@ -47,7 +48,25 @@ export default Vue.extend({
 
 <style scoped lang="scss">
 @import '../common/vue-telekom/styles/base/variables';
-
+.loading {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  border-top-color: grey;
+  margin-bottom: 20px;
+  margin-left: 50%;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
 .card {
   margin-left: 50px;
   margin-right: 50px;
@@ -65,7 +84,4 @@ export default Vue.extend({
 .title {
   font-weight: bold;
 }
-  .loading {
-    text-align: center;
-  }
 </style>
