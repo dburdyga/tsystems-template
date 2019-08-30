@@ -1,5 +1,6 @@
 <template>
     <div class="posts">
+      <p class="loading" v-if="loading">LOADING...</p>
       <h1 class="header">Request using Fetch</h1>
       <div class="card"
            v-for="post in posts"
@@ -26,11 +27,15 @@ import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
 
 export default Vue.extend({
-  props: {
-    msg: String
+  data() {
+    return {
+      loading: true
+    }
   },
   created () {
-    this.$store.dispatch(FETCH_POSTS);
+    this.$store.dispatch(FETCH_POSTS)
+      .then(()=> {}
+      )
   },
   computed: {
     ...mapGetters({
@@ -60,4 +65,7 @@ export default Vue.extend({
 .title {
   font-weight: bold;
 }
+  .loading {
+    text-align: center;
+  }
 </style>
