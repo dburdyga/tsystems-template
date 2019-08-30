@@ -22,7 +22,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapGetters } from 'vuex'
+import { mapGetters } from 'vuex';
 import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
 
@@ -30,13 +30,13 @@ export default Vue.extend({
   data() {
     return {
       loading: false
-    }
+    };
   },
-  created () {
+  created() {
     this.loading = true;
     this.$store.dispatch(FETCH_POSTS)
       .then(() => this.loading = false)
-      .catch(() => this.loading = false)
+      .catch(() => this.loading = false);
   },
   computed: {
     ...mapGetters({

@@ -17,12 +17,12 @@ const postState: Module<IPostState, {}> = {
       return fetch('https://jsonplaceholder.typicode.com/posts')
         .then(res => res.json())
         .then(posts => commit('SET_POSTS', posts))
-        .catch((err) => console.log(err))
+        .catch(err => console.log(err));
     }
   },
   mutations: {
     [SET_POSTS](state, posts: IPost[]) {
-      state.posts = posts
+      state.posts = posts;
     }
   },
   getters: {

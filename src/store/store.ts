@@ -11,7 +11,7 @@ export default new Vuex.Store({
     alertState,
     fileUploadState,
     posts
-  },
+  }
 });
 
 
