@@ -22,16 +22,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapGetters } from 'vuex'
-import {GET_LOADING_STATE} from '../store/loading/getter-types';
-import {FETCH_POSTS} from "@/store/posts/action-types";
-import {POSTS} from "@/store/posts/getter-types";
+import { mapGetters } from 'vuex';
+import {GET_LOADING_STATE} from '@/store/loading/getter-types';
+import {FETCH_POSTS} from '@/store/posts/action-types';
+import {POSTS} from '@/store/posts/getter-types';
 
 export default Vue.extend({
   props: {
     msg: String
   },
-  created () {
+  created() {
     this.$store.dispatch(FETCH_POSTS);
   },
   computed: {

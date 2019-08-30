@@ -13,7 +13,7 @@ export default new Vuex.Store({
     fileUploadState,
     loading,
     posts
-  },
+  }
 });
 
 
