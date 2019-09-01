@@ -28,9 +28,6 @@ import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
 
 export default Vue.extend({
-  props: {
-    msg: String
-  },
   created() {
     this.$store.dispatch(FETCH_POSTS);
   },
