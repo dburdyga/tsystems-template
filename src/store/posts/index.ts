@@ -17,10 +17,7 @@ const postState: Module<IPostState, {}> = {
     [FETCH_POSTS]({commit}) {
       axios
         .get('https://jsonplaceholder.typicode.com/posts')
-        .then(res => this.posts = res.data)
-        .then(posts => {
-          commit('SET_POSTS', posts);
-        })
+        .then(res => { commit(SET_POSTS, res.data)})
         .catch(error => console.log('Error: ', error));
     }
   },
