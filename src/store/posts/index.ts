@@ -3,16 +3,18 @@ import axios, {AxiosError} from 'axios';
 import {SET_POSTS} from './mutation-types';
 import {IPost} from '@/shared/interfaces/IPost';
 import {FETCH_POSTS} from '@/store/posts/action-types';
-import {POSTS} from '@/store/posts/getter-types';
-import {SET_ERROR} from "@/store/loading/mutation-types";
+import {ERROR, POSTS} from '@/store/posts/getter-types';
+import {SET_ERROR} from "@/store/posts/mutation-types";
 
 interface IPostState {
   posts: IPost[];
+  error: string;
 }
 
 const postState: Module<IPostState, {}> = {
   state: {
-    posts: []
+    posts: [],
+    error: ''
   },
   actions: {
     [FETCH_POSTS]({commit}) {
@@ -28,10 +30,14 @@ const postState: Module<IPostState, {}> = {
   mutations: {
     [SET_POSTS](state, posts: IPost[]) {
       state.posts = posts;
+    },
+    [SET_ERROR](state, payload: string) {
+      state.error = payload;
     }
   },
   getters: {
-    [POSTS]: state => state.posts
+    [POSTS]: state => state.posts,
+    [ERROR]: state => state.error
   }
 };
 

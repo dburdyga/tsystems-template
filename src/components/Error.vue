@@ -1,6 +1,6 @@
 <template>
   <div class="error">
-    <p>Error</p>
+    <div class="notification is-danger">Error. Oops, something went wrong!</div>
   </div>
 </template>
 
@@ -17,6 +17,8 @@
     color: red;
     font-weight: bold;
     text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
   }
 
 </style>
