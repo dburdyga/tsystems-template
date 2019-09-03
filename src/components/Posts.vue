@@ -1,6 +1,6 @@
 <template>
     <div class="posts">
-      <b-loading :active.sync="loading" v-if="isLoading"/>
+      <p class="loading" v-if="loading"></p>
       <h1 class="header">Request using Axios</h1>
       <Error v-if="error"></Error>
       <div class="card"
@@ -24,7 +24,6 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
-import {GET_LOADING_STATE} from '@/store/loading/getter-types';
 import {FETCH_POSTS} from '@/store/posts/action-types';
 import {ERROR, POSTS} from '@/store/posts/getter-types';
 import Error from './Error.vue';
@@ -35,18 +34,17 @@ export default Vue.extend({
   },
   data() {
     return {
-      isLoading: false
-    }
+      loading: false
+    };
   },
   created() {
-    this.isLoading = true;
+    this.loading = true;
     this.$store.dispatch(FETCH_POSTS)
-      .then(() => this.isLoading = false)
-      .catch(() => this.isLoading = false);
+      .then(() => this.loading = false)
+      .catch(() => this.loading = false);
   },
   computed: {
     ...mapGetters({
-      loading: GET_LOADING_STATE,
       posts: POSTS,
       error: ERROR
     })
@@ -57,6 +55,25 @@ export default Vue.extend({
 <style scoped lang="scss">
 @import '../common/vue-telekom/styles/base/variables';
 
+.loading {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 3px solid white;
+  border-radius: 50%;
+  border-top-color: grey;
+  margin-bottom: 20px;
+  margin-left: 50%;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
 .card {
   margin-left: 50px;
   margin-right: 50px;

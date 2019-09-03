@@ -3,12 +3,12 @@ import {GET_LOADING_STATE} from './getter-types';
 import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE} from './mutation-types';
 
 interface ILoadingState {
-  loading: string[]
+  loading: string[];
 }
 
 const loadingState: Module<ILoadingState, {}> = {
   state: {
-    loading: [],
+    loading: []
 
   },
   mutations: {
@@ -20,7 +20,7 @@ const loadingState: Module<ILoadingState, {}> = {
     }
   },
   getters: {
-    [GET_LOADING_STATE]: state => Boolean(state.loading.length),
+    [GET_LOADING_STATE]: state => Boolean(state.loading.length)
   }
 };
 
