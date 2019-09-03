@@ -17,10 +17,8 @@ const postState: Module<IPostState, {}> = {
     [FETCH_POSTS]({commit}) {
       axios
         .get('https://jsonplaceholder.typicode.com/posts/')
-        .then(res => { commit(SET_POSTS, res.data)}) //isLoading=true
-        .catch(error => console.log('Show error notification!', error.request))
-        .then ()  //isLoading=false
-
+        .then(res => {commit(SET_POSTS, res.data);})
+        .catch(error => console.log('Show error notification!', error.request));
     }
   },
   mutations: {

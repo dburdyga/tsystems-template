@@ -1,6 +1,6 @@
 <template>
     <div class="posts">
-      <b-loading :active.sync="loading"/>
+      <b-loading :active.sync="loading" v-if="isLoading"/>
       <h1 class="header">Request using Axios</h1>
       <div class="card"
            v-for="post in posts"
@@ -28,8 +28,16 @@ import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
 
 export default Vue.extend({
+  data() {
+    return {
+      isLoading: false
+    }
+  },
   created() {
-    this.$store.dispatch(FETCH_POSTS);
+    this.isLoading = true;
+    this.$store.dispatch(FETCH_POSTS)
+      .then(() => this.isLoading = false)
+      .catch(() => this.isLoading = false);
   },
   computed: {
     ...mapGetters({
