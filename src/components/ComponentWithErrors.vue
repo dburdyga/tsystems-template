@@ -14,7 +14,7 @@
 
   .error {
     margin-top: 100px;
-    color: red;
+    color: grey;
     font-weight: bold;
     text-align: center;
   }
