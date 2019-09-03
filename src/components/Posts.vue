@@ -24,7 +24,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { mapGetters } from 'vuex';
-import {GET_LOADING_STATE} from '@/store/loading/getter-types';
+import {ERROR, GET_LOADING_STATE} from '@/store/loading/getter-types';
 import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
 import Error from './Error.vue';
@@ -47,7 +47,8 @@ export default Vue.extend({
   computed: {
     ...mapGetters({
       loading: GET_LOADING_STATE,
-      posts: POSTS
+      posts: POSTS,
+      error: ERROR
     })
   }
 });

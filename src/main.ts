@@ -3,7 +3,6 @@ import App from './App.vue';
 import router from './router';
 import store from './store/store';
 import Buefy from 'buefy';
-import './store/interceptors/loading';
 import 'bulma/css/bulma.css';
 import 'buefy/dist/buefy.css';
 import './styles.scss';

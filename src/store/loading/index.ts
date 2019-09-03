@@ -1,14 +1,16 @@
 import {Module} from 'vuex';
-import {GET_LOADING_STATE} from './getter-types';
-import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE} from './mutation-types';
+import {ERROR, GET_LOADING_STATE} from './getter-types';
+import {DECREMENT_LOADING_STATE, INCREMENT_LOADING_STATE, SET_ERROR} from './mutation-types';
 
 interface ILoadingState {
   loading: string[];
+  error: string;
 }
 
 const loadingState: Module<ILoadingState, {}> = {
   state: {
-    loading: []
+    loading: [],
+    error: ''
   },
   mutations: {
     [INCREMENT_LOADING_STATE](state, loading: string) {
@@ -16,10 +18,14 @@ const loadingState: Module<ILoadingState, {}> = {
     },
     [DECREMENT_LOADING_STATE](state) {
       state.loading.pop();
+    },
+    [SET_ERROR](state, payload: string) {
+      state.error = payload;
     }
   },
   getters: {
-    [GET_LOADING_STATE]: state => Boolean(state.loading.length)
+    [GET_LOADING_STATE]: state => Boolean(state.loading.length),
+    [ERROR]:state => state.error
   }
 };
 
