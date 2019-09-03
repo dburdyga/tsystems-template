@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import About from './views/About.vue';
 import VueTelekomGetStarted from './components/VueTelekomGetStarted/VueTelekomGetStarted.vue';
+import ComponentWithErrors from './components/ComponentWithErrors.vue';
 
 Vue.use(Router);
 
@@ -23,6 +24,15 @@ export default new Router({
       name: 'vue-telekom',
       component: VueTelekomGetStarted,
       props: true
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: ComponentWithErrors
+    },
+    {
+      path: '*',
+      redirect: '/404'
     }
   ]
 });
