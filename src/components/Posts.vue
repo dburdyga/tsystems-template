@@ -1,6 +1,7 @@
 <template>
     <div class="posts">
       <b-loading :active.sync="loading" v-if="isLoading"/>
+      <Error v-if="error"></Error>
       <h1 class="header">Request using Axios</h1>
       <div class="card"
            v-for="post in posts"
@@ -26,8 +27,12 @@ import { mapGetters } from 'vuex';
 import {GET_LOADING_STATE} from '@/store/loading/getter-types';
 import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
+import Error from './Error.vue';
 
 export default Vue.extend({
+  components: {
+    Error
+  },
   data() {
     return {
       isLoading: false
