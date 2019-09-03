@@ -16,9 +16,30 @@ const postState: Module<IPostState, {}> = {
   actions: {
     [FETCH_POSTS]({commit}) {
       axios
-        .get('https://jsonplaceholder.typicode.com/posts')
+        .get('https://jsonplaceholder.typicode.com/posts/')
         .then(res => { commit(SET_POSTS, res.data)})
-        .catch(error => console.log('Error: ', error));
+        // .catch(error => {
+        //   console.log(error.response.data);
+        // });
+        .catch(
+            function (error) {
+              console.log('Show error notification!');
+              return Promise.reject(error)
+            }
+          )
+        // .catch(error => console.log('Error: ', error.message))
+        // .catch(error => {
+        //   if (error.res) {
+        //     console.log(error.res.data);
+        //     console.log(error.res.status);
+        //     console.log(error.res.headers);
+        //   } else if (error.request) {
+        //     console.log(error.request);
+        //   } else {
+        //     console.log('Error: ', error.message);
+        //   }
+        //   console.log(error.config);
+        // });
     }
   },
   mutations: {
