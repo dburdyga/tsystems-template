@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import MyButton from './MyButton';
 import Welcome from './Welcome';
-import ActionsPaneBlock from './ActionsPaneBlock';
+import Tabs from './Tabs';
 
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
@@ -15,8 +15,8 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
   methods: { action: linkTo('Button') },
 }));
 
-storiesOf('ActionsPaneBlock', module).add('to Storybook', () => ({
-  components: { ActionsPaneBlock },
+storiesOf('Tabs', module).add('to Storybook', () => ({
+  components: { Tabs },
   template: '<welcome :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
