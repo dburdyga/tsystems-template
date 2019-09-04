@@ -10,7 +10,7 @@ export default {
 
   data() {
     return {
-      tabswrap: {
+      tabsWrap: {
         display: flex,
         justifyContent: center,
       },
@@ -111,7 +111,7 @@ export default {
   },
 
   template: `
-     <section :style="tabswrap">
+     <section :style="tabsWrap">
       <div :style="tabs">
         <slot/>
       </div>
