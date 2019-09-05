@@ -7,7 +7,7 @@ import { linkTo } from '@storybook/addon-links';
 import MyButton from './MyButton';
 import Welcome from './Welcome';
 import Checkbox from './Checkbox';
-
+import ActionsPane from './ActionsPane';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
@@ -15,9 +15,22 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
   methods: { action: linkTo('Button') },
 }));
 
-storiesOf('Checkbox', module).add('to Storybook', () => ({
+storiesOf('Checkbox', module).add('Basic Usage', () => ({
   components: { Checkbox },
-  template: '<checkbox :showApp="action" />',
+  props: {
+    isChecked: { type: Boolean, default: boolean('checked', true) },
+    color: { type: String, default: text('color', '#e64a19') },
+    className: { type: String, default: text('class', '') },
+  },
+  template: `<check-box :class="className" :checked="isChecked" :color="color"></check-box>`,
+  // template: '<checkbox @click="action" />',
+  methods: { action: action('clicked') },
+}));
+
+
+storiesOf('ActionsPane', module).add('to Storybook', () => ({
+  components: { ActionsPane },
+  template: '<actionspane :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
 

@@ -12,15 +12,13 @@ export default {
   data() {
     return {
 
-
     }
   },
-
 
   template: `
    <div>checkbox</div>
    <label
-    class="checkbox"
+    :style="checkbox"
     :class="{'is-disabled': disabled}"
     @click="toggleCheck">
     <input
@@ -30,9 +28,9 @@ export default {
       type="checkbox"
       @click.stop.prevent>
     <span
-      class="checkbox-icon"
+      :style="checkbox-icon"
       :class="{'is-checked': checkedValue}"/>
-    <span class="checkbox-label">
+    <span :style="checkbox-label">
       <slot/>
     </span>
   </label>
@@ -41,14 +39,14 @@ export default {
   computed: {
     checkedValue() {
       return this.checked;
-        }
-      },
+    }
+  },
   methods: {
     toggleCheck() {
       if (!this.disabled) {
-            this.$emit('update:checked', !this.checked);
-            this.showApp();
-          }
-        },
+        this.$emit('update:checked', !this.checked);
+        this.showApp();
       }
-    };
+    },
+  }
+};
