@@ -6,7 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 
 import MyButton from './MyButton';
 import Welcome from './Welcome';
-import Tabs from './Tabs';
+import Checkbox from './Checkbox';
 
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
@@ -15,9 +15,9 @@ storiesOf('Welcome', module).add('to Storybook', () => ({
   methods: { action: linkTo('Button') },
 }));
 
-storiesOf('Tabs', module).add('to Storybook', () => ({
-  components: { Tabs },
-  template: '<welcome :showApp="action" />',
+storiesOf('Checkbox', module).add('to Storybook', () => ({
+  components: { Checkbox },
+  template: '<checkbox :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
 
