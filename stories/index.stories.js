@@ -3,45 +3,29 @@
 import { storiesOf } from '@storybook/vue';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { withKnobs, text } from '@storybook/addon-knobs';
+
+import 'bulma/css/bulma.css'
 
 import MyButton from './MyButton';
 import Welcome from './Welcome';
-import Checkbox from './Checkbox';
-import ActionsPane from './ActionsPane';
-import ErrorMessage from './ErrorMessage';
+import ErrorMessage from './ErrorMessage'
 
-storiesOf('Welcome', module).add('to Storybook', () => ({
+
+const stories = storiesOf('Storybook Knobs', module);
+stories.addDecorator(withKnobs);
+
+stories.add('Welcome', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
 
-storiesOf('ErrorMessage', module).add('to Storybook', () => ({
+stories.add('ErrorMessage', () => ({
   components: { ErrorMessage },
   template: '<error-message :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
-
-storiesOf('ActionsPane', module).add('to Storybook', () => ({
-  components: { ActionsPane },
-  template: '<actions-pane :showApp="action" />',
-  methods: { action: linkTo('Button') },
-}));
-
-
-storiesOf('Checkbox', module).add('Basic Usage', () => ({
-  components: { Checkbox },
-  props: {
-    isChecked: { type: Boolean, default: boolean('checked', true) },
-    color: { type: String, default: text('color', '#e64a19') },
-    className: { type: String, default: text('class', '') },
-  },
-  template: `<check-box :class="className" :checked="isChecked" :color="color"></check-box>`,
-  // template: '<checkbox @click="action" />',
-  methods: { action: action('clicked') },
-}));
-
-
 
 storiesOf('Button', module)
   .add('with text', () => ({
