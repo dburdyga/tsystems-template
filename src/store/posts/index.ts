@@ -8,7 +8,7 @@ interface IPostState {
   posts: IPost[];
 }
 
-// const myRequest = new Request('posts.json');
+const myRequest = new Request('./posts.json');
 
 const postState: Module<IPostState, {}> = {
   state: {
@@ -16,7 +16,7 @@ const postState: Module<IPostState, {}> = {
   },
   actions: {
     [FETCH_POSTS]({commit}) {
-      return fetch('https://jsonplaceholder.typicode.com/posts')
+      return fetch('posts.json')
         .then(res => res.json())
         .then(posts => commit('SET_POSTS', posts))
         .catch(err => console.log(err));
