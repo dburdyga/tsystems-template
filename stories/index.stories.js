@@ -30,7 +30,7 @@ storiesOf('Checkbox', module).add('Basic Usage', () => ({
 
 storiesOf('ActionsPane', module).add('to Storybook', () => ({
   components: { ActionsPane },
-  template: '<actionspane :showApp="action" />',
+  template: '<actions-pane :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
 

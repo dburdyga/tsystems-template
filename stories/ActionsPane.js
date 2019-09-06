@@ -1,5 +1,5 @@
 export default {
-  name: 'actionspane',
+  name: 'actions-pane',
 
   props: {
     showApp: {
@@ -15,7 +15,7 @@ export default {
   },
 
   template: `
-   <div>actionspane</div>
+   <div>Actions-pane</div>
    
   `,
 
