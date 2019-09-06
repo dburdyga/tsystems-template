@@ -5,7 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text } from '@storybook/addon-knobs';
 
-import 'bulma/css/bulma.css'
+import 'bulma/css/bulma.css';
 
 import MyButton from './MyButton';
 import Welcome from './Welcome';
