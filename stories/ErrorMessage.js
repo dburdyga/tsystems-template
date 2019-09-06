@@ -18,11 +18,11 @@ export default {
   data() {
     return {
       section: {
-        width: 480,
-        // padding: '$error-message-padding',
-        // margin-bottom: '$error-message-spacing',
-        // border-radius: '$telekom-radius',
-        // background-color: '$red-a05',
+        width: '480px',
+        padding: '18px 24px',
+        marginBottom: 18,
+        borderRadius: 4,
+        backgroundColor: '#FDF2F2',
         border: '1px solid #D90000',
       }
     }},
