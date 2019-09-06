@@ -8,12 +8,26 @@ import MyButton from './MyButton';
 import Welcome from './Welcome';
 import Checkbox from './Checkbox';
 import ActionsPane from './ActionsPane';
+import ErrorMessage from './ErrorMessage';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   components: { Welcome },
   template: '<welcome :showApp="action" />',
   methods: { action: linkTo('Button') },
 }));
+
+storiesOf('ErrorMessage', module).add('to Storybook', () => ({
+  components: { ErrorMessage },
+  template: '<error-message :showApp="action" />',
+  methods: { action: linkTo('Button') },
+}));
+
+storiesOf('ActionsPane', module).add('to Storybook', () => ({
+  components: { ActionsPane },
+  template: '<actions-pane :showApp="action" />',
+  methods: { action: linkTo('Button') },
+}));
+
 
 storiesOf('Checkbox', module).add('Basic Usage', () => ({
   components: { Checkbox },
@@ -28,11 +42,6 @@ storiesOf('Checkbox', module).add('Basic Usage', () => ({
 }));
 
 
-storiesOf('ActionsPane', module).add('to Storybook', () => ({
-  components: { ActionsPane },
-  template: '<actions-pane :showApp="action" />',
-  methods: { action: linkTo('Button') },
-}));
 
 storiesOf('Button', module)
   .add('with text', () => ({
