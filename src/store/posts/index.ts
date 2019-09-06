@@ -8,6 +8,8 @@ interface IPostState {
   posts: IPost[];
 }
 
+// const myRequest = new Request('posts.json');
+
 const postState: Module<IPostState, {}> = {
   state: {
     posts: []
