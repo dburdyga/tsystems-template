@@ -1,40 +1,47 @@
 <template>
     <div class="posts">
-      <h1 class="header">Request using Fetch</h1>
       <p class="loading" v-if="loading"></p>
-      <div class="card"
+      <div class="card">
+<!--        <div class="card-content">-->
+<!--          <div class="media">-->
+<!--            <div class="media-content">-->
+<!--              <p class="title is-4">Title: {{ post.title }}</p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="content">-->
+<!--            <p>Description: {{ post.body }}</p>-->
+<!--          </div>-->
+<!--        </div>-->
+    </div>
+      <div class="tile"
            v-for="post in posts"
            :key="post.id"
       >
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">Title: {{ post.title }}</p>
-            </div>
-          </div>
-          <div class="content">
-            <p>Description: {{ post.body }}</p>
-          </div>
-        </div>
-    </div>
-      <div class="tile">
         <div class="tile is-ancestor">
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
                 <article class="tile is-child notification is-primary">
-                  <p class="title">Name</p>
-                  <p class="subtitle">Top tile</p>
+                  <p class="title">{{ post.name }}</p>
+                  <p class="subtitle">Name</p>
+                </article>
+                <article class="tile is-child notification is-dark">
+                  <p class="title">{{ post.version }}</p>
+                  <p class="subtitle">Version</p>
+                </article>
+                <article class="tile is-child notification is-link">
+                  <p class="title">{{ post.zipUrl }}</p>
+                  <p class="subtitle">ZIP URL</p>
                 </article>
                 <article class="tile is-child notification is-warning">
-                  <p class="title">Version</p>
-                  <p class="subtitle">Bottom tile</p>
+                  <p class="title">{{ post.dashboardUrl }}</p>
+                  <p class="subtitle">dashboard URL</p>
                 </article>
               </div>
               <div class="tile is-parent">
                 <article class="tile is-child notification is-info">
-                  <p class="title">Image</p>
-                  <p class="subtitle">With an image</p>
+                  <p class="title">{{ post.image }}</p>
+                  <p class="subtitle">Image</p>
                   <figure class="image is-4by3">
                     <img src="https://bulma.io/images/placeholders/640x480.png">
                   </figure>
@@ -43,8 +50,8 @@
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification is-danger">
-                <p class="title">codeSnippets</p>
-                <p class="subtitle">Aligned with the right tile</p>
+                <p class="title">{{ post.codeSnippets }}</p>
+                <p class="subtitle">code Snippets</p>
                 <div class="content">
                   <!-- Content -->
                 </div>
@@ -54,7 +61,7 @@
           <div class="tile is-parent">
             <article class="tile is-child notification is-success">
               <div class="content">
-                <p class="title">Address Docker</p>
+                <p class="title">{{ post.addressDocker }}</p>
                 <p class="subtitle">...</p>
                 <div class="content">
                   <!-- Content -->
@@ -65,7 +72,7 @@
           <div class="tile is-parent">
             <article class="tile is-child notification is-success">
               <div class="content">
-                <p class="title">Address Bootnode</p>
+                <p class="title">{{ post.addressBootnode }}</p>
                 <p class="subtitle">...</p>
                 <div class="content">
                   <!-- Content -->
@@ -125,11 +132,17 @@ export default Vue.extend({
 @-webkit-keyframes spin {
   to { -webkit-transform: rotate(360deg); }
 }
+.posts {
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .card {
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 20px;
   text-align: left;
+  box-shadow: none;
 }
 .header {
   font-size: 28px;
