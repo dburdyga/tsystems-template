@@ -12,16 +12,16 @@
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification has-background-grey-light">
+                <article class="tile is-child notification has-background-grey-lighter">
                   <p class="title">{{ post.name }}</p>
                   <p class="subtitle">Environment name</p>
                 </article>
-                <article class="tile is-child notification has-background-grey-lighter">
+                <article class="tile is-child notification has-background-grey-light">
                   <p class="title">{{ post.version }}</p>
                   <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
                 <article
-                  class="tile is-child notification has-background-grey-light"
+                  class="tile is-child notification has-background-grey-lighter"
                   v-if="post.credentials">
                   <p class="title">{{ post.credentials.username }}</p>
                   <p class="title">{{ post.credentials.password }}</p>
@@ -30,7 +30,7 @@
               </div>
               <div class="tile is-parent">
                 <article
-                  class="tile is-child notification has-background-grey-lighter"
+                  class="tile is-child notification has-background-grey-light"
                   v-if="post.images">
                   <p class="title">{{ post.images.image1 }}</p>
                   <p class="title">{{ post.images.image2 }}</p>
@@ -40,28 +40,28 @@
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification has-background-grey-lighter">
+              <article class="tile is-child notification has-background-grey-light">
                 <code class="subtitle">{{ post.codeSnippets }}</code>
                 <br></br>
                 <code class="subtitle">{{ post.codeSnippets }}</code>
-                <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>
+<!--                <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>-->
               </article>
             </div>
           </div>
           <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification has-background-grey-light">
+            <article class="tile is-child notification has-background-grey-lighter">
               <p class="title">{{ post.addressDocker }}</p>
               <p class="subtitle">Address of Docker registry</p>
             </article>
-            <article class="tile is-child notification has-background-grey-lighter">
+            <article class="tile is-child notification has-background-grey-light">
               <p class="title">{{ post.addressBootnode }}</p>
               <p class="subtitle">Address of bootnode</p>
             </article>
-            <article class="tile is-child notification has-background-grey-light">
+            <article class="tile is-child notification has-background-grey-lighter">
               <p class="title">{{ post.zipUrl }}</p>
               <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
-            <article class="tile is-child notification has-background-grey-lighter">
+            <article class="tile is-child notification has-background-grey-light">
               <p class="title">{{ post.dashboardUrl }}</p>
               <p class="subtitle">Logging dashboard URL</p>
               <div class="content"></div>
