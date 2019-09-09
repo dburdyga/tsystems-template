@@ -1,15 +1,18 @@
 export interface IPost {
   name: string;
-  version: number;
+  version: string;
   addressDocker: string;
   addressBootnode: string;
-  credentials: [
+  credentials:
     {
       username: string;
       password: string;
-    }
-    ]
-  image: string;
+    },
+  images: {
+    image1: string;
+    image2: string;
+    image3: string;
+  },
   zipUrl: string;
   codeSnippets: string;
   dashboardUrl: string;

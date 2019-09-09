@@ -20,47 +20,50 @@
                   <p class="title">{{ post.version }}</p>
                   <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
-                <article class="tile is-child notification has-background-grey-light">
-                  <p class="title">{{ post.addressDocker }}</p>
-                  <p class="subtitle">Address of Docker registry and credentials for read only account for Docker registry</p>
+                <article
+                  class="tile is-child notification has-background-grey-light"
+                  v-if="post.credentials">
+                  <p class="title">{{ post.credentials.username }}</p>
+                  <p class="title">{{ post.credentials.password }}</p>
+                  <p class="subtitle">Credentials for read only account for Docker registry</p>
                 </article>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child notification has-background-grey-lighter">
-                  <p class="title">{{ post.image }}</p>
+                <article
+                  class="tile is-child notification has-background-grey-lighter"
+                  v-if="post.images">
+                  <p class="title">{{ post.images.image1 }}</p>
+                  <p class="title">{{ post.images.image2 }}</p>
+                  <p class="title">{{ post.images.image3 }}</p>
                   <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
-                  <ul>
-                    <li>Image 1</li>
-                    <li>Image 2</li>
-                    <li>Image 3</li>
-                  </ul>
                 </article>
               </div>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification has-background-grey-lighter">
-                <p class="title">{{ post.addressBootnode }}</p>
-                <p class="subtitle">Address of bootnode</p>
+                <code class="subtitle">{{ post.codeSnippets }}</code>
+                <br></br>
+                <code class="subtitle">{{ post.codeSnippets }}</code>
               </article>
             </div>
           </div>
           <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification has-background-grey-lighter">
-              <p class="title">{{ post.username }}</p>
-              <p class="subtitle">username and password</p>
+            <article class="tile is-child notification has-background-grey-light">
+              <p class="title">{{ post.addressDocker }}</p>
+              <p class="subtitle">Address of Docker registry</p>
             </article>
             <article class="tile is-child notification has-background-grey-lighter">
+              <p class="title">{{ post.addressBootnode }}</p>
+              <p class="subtitle">Address of bootnode</p>
+            </article>
+            <article class="tile is-child notification has-background-grey-light">
               <p class="title">{{ post.zipUrl }}</p>
               <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
-            <article class="tile is-child notification has-background-grey-light">
+            <article class="tile is-child notification has-background-grey-lighter">
               <p class="title">{{ post.dashboardUrl }}</p>
               <p class="subtitle">Logging dashboard URL</p>
               <div class="content"></div>
-            </article>
-            <article class="tile is-child notification has-background-grey-lighter">
-              <p class="title">{{ post.codeSnippets }}</p>
-              <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>
             </article>
           </div>
         </div>

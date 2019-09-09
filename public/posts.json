@@ -2,40 +2,20 @@
   {
     "id": "2",
     "name": "test",
-    "version": 1.1,
+    "version": "Staxd 0.1.1",
     "addressDocker": "http://addressdocker.tlabs.registry.com",
     "addressBootnode": "http://00112233445599:1",
-    "image": "docker images",
+    "images": {
+      "image1": "Ethereum Image #0.1.1",
+      "image2": "MCC Image #0.1.1",
+      "image3": "Staxd Image #0.1.1"
+    },
     "zipUrl": "http://www.example.com/example.zip",
-    "codeSnippets": "some code",
-    "credentials": [
-      {
-        "username": "Alex",
-        "password": "1234"
-      }
-    ],
-    "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
-  },
-  {
-    "id": "3",
-    "name": "demo",
-    "version": 2.1,
-    "addressDocker": "http://addressdocker.tlabs.registry.com",
-    "addressBootnode": "http://00112233445599:1",
-    "image": "docker images",
-    "zipUrl": "http://www.example.com/example.zip",
-    "codeSnippets": "some code",
-    "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
-  },
-  {
-    "id": "3",
-    "name": "dev",
-    "version": 2.1,
-    "addressDocker": "http://addressdocker.tlabs.registry.com",
-    "addressBootnode": "http://00112233445599:1",
-    "image": "docker images",
-    "zipUrl": "http://www.example.com/example.zip",
-    "codeSnippets": "some code",
+    "codeSnippets": "var t = Object(this);\n var len = t.length >>> 0;\n\n var thisArg = arguments.length >= 2 ? arguments[1] : void 0;\n for (var i = 0; i < len; i++) {\n if (i in t && fun.call(thisArg, t[i], i, t)) {\n return true;\n      }\n    }",
+    "credentials": {
+      "username": "Alex",
+      "password": "1234"
+    },
     "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
   }
 ]
