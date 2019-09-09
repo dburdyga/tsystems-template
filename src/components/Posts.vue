@@ -1,6 +1,7 @@
 <template>
     <div class="posts">
       <p class="loading" v-if="loading"></p>
+      <h2 class="title is-2">Environment info page</h2>
       <div class="card">
 <!--        <div class="card-content">-->
 <!--          <div class="media">-->
@@ -21,15 +22,15 @@
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification is-warning">
+                <article class="tile is-child notification is-danger">
                   <p class="title">{{ post.name }}</p>
                   <p class="subtitle">Environment name</p>
                 </article>
-                <article class="tile is-child notification is-danger">
+                <article class="tile is-child notification is-warning">
                   <p class="title">{{ post.version }}</p>
                   <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
-                <article class="tile is-child notification is-info">
+                <article class="tile is-child notification is-success">
                   <p class="title">{{ post.addressDocker }}</p>
                   <p class="subtitle">Address of Docker registry and credentials for read only account for Docker registry</p>
                 </article>
@@ -38,28 +39,30 @@
                 <article class="tile is-child notification is-light">
                   <p class="title">{{ post.image }}</p>
                   <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
-<!--                  <figure class="image image is-64x64">-->
-<!--                    <img src="https://bulma.io/images/placeholders/64x64.png">-->
-<!--                  </figure>-->
+                  <ul>
+                    <li>Image 1</li>
+                    <li>Image 2</li>
+                    <li>Image 3</li>
+                  </ul>
                 </article>
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification is-dark">
-                <p class="title">{{ post.dashboardUrl }}</p>
-                <p class="subtitle">Logging dashboard URL</p>
-                <div class="content"></div>
+              <article class="tile is-child notification is-success">
+                <p class="title">{{ post.addressBootnode }}</p>
+                <p class="subtitle">Address of bootnode</p>
               </article>
             </div>
           </div>
           <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification is-success">
+            <article class="tile is-child notification is-info">
               <p class="title">{{ post.zipUrl }}</p>
               <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
-            <article class="tile is-child notification is-warning">
-              <p class="title">{{ post.addressBootnode }}</p>
-              <p class="subtitle">Address of bootnode</p>
+            <article class="tile is-child notification is-info">
+              <p class="title">{{ post.dashboardUrl }}</p>
+              <p class="subtitle">Logging dashboard URL</p>
+              <div class="content"></div>
             </article>
             <article class="tile is-child notification is-link">
               <p class="title">{{ post.codeSnippets }}</p>
@@ -123,6 +126,7 @@ export default Vue.extend({
   margin-bottom: 20px;
   margin-left: 20px;
   margin-right: 20px;
+  margin-top: 20px;
 }
 .card {
   margin-left: 50px;
