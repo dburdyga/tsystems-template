@@ -3,16 +3,6 @@
       <p class="loading" v-if="loading"></p>
       <h2 class="title is-2">Environment info page</h2>
       <div class="card">
-<!--        <div class="card-content">-->
-<!--          <div class="media">-->
-<!--            <div class="media-content">-->
-<!--              <p class="title is-4">Title: {{ post.title }}</p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="content">-->
-<!--            <p>Description: {{ post.body }}</p>-->
-<!--          </div>-->
-<!--        </div>-->
     </div>
       <div class="tile"
            v-for="post in posts"
@@ -22,21 +12,21 @@
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification is-danger">
+                <article class="tile is-child notification has-background-grey-light">
                   <p class="title">{{ post.name }}</p>
                   <p class="subtitle">Environment name</p>
                 </article>
-                <article class="tile is-child notification is-warning">
+                <article class="tile is-child notification has-background-grey-lighter">
                   <p class="title">{{ post.version }}</p>
                   <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
-                <article class="tile is-child notification is-success">
+                <article class="tile is-child notification has-background-grey-light">
                   <p class="title">{{ post.addressDocker }}</p>
                   <p class="subtitle">Address of Docker registry and credentials for read only account for Docker registry</p>
                 </article>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child notification is-light">
+                <article class="tile is-child notification has-background-grey-lighter">
                   <p class="title">{{ post.image }}</p>
                   <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
                   <ul>
@@ -48,23 +38,27 @@
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification is-success">
+              <article class="tile is-child notification has-background-grey-lighter">
                 <p class="title">{{ post.addressBootnode }}</p>
                 <p class="subtitle">Address of bootnode</p>
               </article>
             </div>
           </div>
           <div class="tile is-parent is-vertical">
-            <article class="tile is-child notification is-info">
+            <article class="tile is-child notification has-background-grey-lighter">
+              <p class="title">{{ post.username }}</p>
+              <p class="subtitle">username and password</p>
+            </article>
+            <article class="tile is-child notification has-background-grey-lighter">
               <p class="title">{{ post.zipUrl }}</p>
               <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
-            <article class="tile is-child notification is-info">
+            <article class="tile is-child notification has-background-grey-light">
               <p class="title">{{ post.dashboardUrl }}</p>
               <p class="subtitle">Logging dashboard URL</p>
               <div class="content"></div>
             </article>
-            <article class="tile is-child notification is-link">
+            <article class="tile is-child notification has-background-grey-lighter">
               <p class="title">{{ post.codeSnippets }}</p>
               <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>
             </article>

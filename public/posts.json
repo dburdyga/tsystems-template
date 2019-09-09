@@ -1,10 +1,27 @@
 [
   {
     "id": "2",
-    "name": "MCC",
+    "name": "test",
     "version": 1.1,
-    "addressDocker": "172.17.0.2",
-    "addressBootnode": "enode://c667fdf1687@172.31.62.34:30303?discport=0",
+    "addressDocker": "http://addressdocker.tlabs.registry.com",
+    "addressBootnode": "http://00112233445599:1",
+    "image": "docker images",
+    "zipUrl": "http://www.example.com/example.zip",
+    "codeSnippets": "some code",
+    "credentials": [
+      {
+        "username": "Alex",
+        "password": "1234"
+      }
+    ],
+    "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
+  },
+  {
+    "id": "3",
+    "name": "demo",
+    "version": 2.1,
+    "addressDocker": "http://addressdocker.tlabs.registry.com",
+    "addressBootnode": "http://00112233445599:1",
     "image": "docker images",
     "zipUrl": "http://www.example.com/example.zip",
     "codeSnippets": "some code",
@@ -12,10 +29,10 @@
   },
   {
     "id": "3",
-    "name": "Staxd",
+    "name": "dev",
     "version": 2.1,
-    "addressDocker": "172.17.0.2",
-    "addressBootnode": "enode://c667fdf1687@172.31.62.34:30303?discport=0",
+    "addressDocker": "http://addressdocker.tlabs.registry.com",
+    "addressBootnode": "http://00112233445599:1",
     "image": "docker images",
     "zipUrl": "http://www.example.com/example.zip",
     "codeSnippets": "some code",

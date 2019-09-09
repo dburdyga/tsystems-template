@@ -3,6 +3,12 @@ export interface IPost {
   version: number;
   addressDocker: string;
   addressBootnode: string;
+  credentials: [
+    {
+      username: string;
+      password: string;
+    }
+    ]
   image: string;
   zipUrl: string;
   codeSnippets: string;
