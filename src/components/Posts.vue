@@ -29,13 +29,13 @@
                   <p class="title">{{ post.version }}</p>
                   <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
-                <article class="tile is-child notification is-link">
+                <article class="tile is-child notification is-info">
                   <p class="title">{{ post.addressDocker }}</p>
                   <p class="subtitle">Address of Docker registry and credentials for read only account for Docker registry</p>
                 </article>
               </div>
               <div class="tile is-parent">
-                <article class="tile is-child notification is-info">
+                <article class="tile is-child notification is-light">
                   <p class="title">{{ post.image }}</p>
                   <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
                   <figure class="image is-4by3">
