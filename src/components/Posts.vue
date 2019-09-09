@@ -22,8 +22,8 @@
             <div class="tile">
               <div class="tile is-parent is-vertical">
                 <article class="tile is-child notification is-warning">
-                  <p class="subtitle">Environment name</p>
                   <p class="title">{{ post.name }}</p>
+                  <p class="subtitle">Environment name</p>
                 </article>
                 <article class="tile is-child notification is-danger">
                   <p class="title">{{ post.version }}</p>
@@ -38,17 +38,9 @@
                 <article class="tile is-child notification is-light">
                   <p class="title">{{ post.image }}</p>
                   <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
-                  <figure class="image image is-64x64">
-                    <img src="https://bulma.io/images/placeholders/64x64.png">
-                  </figure>
-                  <br>
-                  <figure class="image image is-64x64">
-                    <img src="https://bulma.io/images/placeholders/64x64.png">
-                  </figure>
-                  <br>
-                  <figure class="image image is-64x64">
-                    <img src="https://bulma.io/images/placeholders/64x64.png">
-                  </figure>
+<!--                  <figure class="image image is-64x64">-->
+<!--                    <img src="https://bulma.io/images/placeholders/64x64.png">-->
+<!--                  </figure>-->
                 </article>
               </div>
             </div>

@@ -3,7 +3,7 @@ export interface IPost {
   version: number;
   addressDocker: string;
   addressBootnode: string;
-  image: HTMLImageElement;
+  image: string;
   zipUrl: string;
   codeSnippets: string;
   dashboardUrl: string;

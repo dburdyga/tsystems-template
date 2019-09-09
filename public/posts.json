@@ -5,7 +5,7 @@
     "version": 1.1,
     "addressDocker": "172.17.0.2",
     "addressBootnode": "enode://c667fdf1687@172.31.62.34:30303?discport=0",
-    "image": "image",
+    "image": "docker images",
     "zipUrl": "http://www.example.com/example.zip",
     "codeSnippets": "some code",
     "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
@@ -16,7 +16,7 @@
     "version": 2.1,
     "addressDocker": "172.17.0.2",
     "addressBootnode": "enode://c667fdf1687@172.31.62.34:30303?discport=0",
-    "image": "image",
+    "image": "docker images",
     "zipUrl": "http://www.example.com/example.zip",
     "codeSnippets": "some code",
     "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
