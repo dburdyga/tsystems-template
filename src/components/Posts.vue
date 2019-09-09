@@ -21,27 +21,23 @@
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
-                <article class="tile is-child notification is-primary">
+                <article class="tile is-child notification is-warning">
+                  <p class="subtitle">Environment name</p>
                   <p class="title">{{ post.name }}</p>
-                  <p class="subtitle">Name</p>
                 </article>
-                <article class="tile is-child notification is-dark">
+                <article class="tile is-child notification is-danger">
                   <p class="title">{{ post.version }}</p>
-                  <p class="subtitle">Version</p>
+                  <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
                 <article class="tile is-child notification is-link">
-                  <p class="title">{{ post.zipUrl }}</p>
-                  <p class="subtitle">ZIP URL</p>
-                </article>
-                <article class="tile is-child notification is-warning">
-                  <p class="title">{{ post.dashboardUrl }}</p>
-                  <p class="subtitle">dashboard URL</p>
+                  <p class="title">{{ post.addressDocker }}</p>
+                  <p class="subtitle">Address of Docker registry and credentials for read only account for Docker registry</p>
                 </article>
               </div>
               <div class="tile is-parent">
                 <article class="tile is-child notification is-info">
                   <p class="title">{{ post.image }}</p>
-                  <p class="subtitle">Image</p>
+                  <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
                   <figure class="image is-4by3">
                     <img src="https://bulma.io/images/placeholders/640x480.png">
                   </figure>
@@ -49,38 +45,29 @@
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification is-danger">
-                <p class="title">{{ post.codeSnippets }}</p>
-                <p class="subtitle">code Snippets</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
+              <article class="tile is-child notification is-dark">
+                <p class="title">{{ post.dashboardUrl }}</p>
+                <p class="subtitle">Logging dashboard URL</p>
+                <div class="content"></div>
               </article>
             </div>
           </div>
-          <div class="tile is-parent">
+          <div class="tile is-parent is-vertical">
             <article class="tile is-child notification is-success">
-              <div class="content">
-                <p class="title">{{ post.addressDocker }}</p>
-                <p class="subtitle">...</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
+              <p class="title">{{ post.zipUrl }}</p>
+              <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-success">
-              <div class="content">
-                <p class="title">{{ post.addressBootnode }}</p>
-                <p class="subtitle">...</p>
-                <div class="content">
-                  <!-- Content -->
-                </div>
-              </div>
+            <article class="tile is-child notification is-warning">
+              <p class="title">{{ post.addressBootnode }}</p>
+              <p class="subtitle">Address of bootnode</p>
+            </article>
+            <article class="tile is-child notification is-link">
+              <p class="title">{{ post.codeSnippets }}</p>
+              <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>
             </article>
           </div>
         </div>
+        <span></span>
       </div>
   </div>
 </template>
@@ -140,7 +127,7 @@ export default Vue.extend({
 .card {
   margin-left: 50px;
   margin-right: 50px;
-  margin-bottom: 20px;
+  margin-top: 20px;
   text-align: left;
   box-shadow: none;
 }

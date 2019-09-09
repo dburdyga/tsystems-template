@@ -1,16 +1,25 @@
 [
   {
     "id": "2",
-    "title": "Hello",
-    "body": "Lola1",
-    "name": "name",
-    "version": 3.1,
-    "addressDocker": "address Docker",
-    "addressBootnode": "address Bootnode",
+    "name": "MCC",
+    "version": 1.1,
+    "addressDocker": "172.17.0.2",
+    "addressBootnode": "enode://c667fdf1687@172.31.62.34:30303?discport=0",
     "image": "image",
-    "zipUrl": "zipUrl",
-    "codeSnippets": "codeSnippets",
-    "dashboardUrl": "dashboardUrl"
+    "zipUrl": "http://www.example.com/example.zip",
+    "codeSnippets": "some code",
+    "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
+  },
+  {
+    "id": "3",
+    "name": "Staxd",
+    "version": 2.1,
+    "addressDocker": "172.17.0.2",
+    "addressBootnode": "enode://c667fdf1687@172.31.62.34:30303?discport=0",
+    "image": "image",
+    "zipUrl": "http://www.example.com/example.zip",
+    "codeSnippets": "some code",
+    "dashboardUrl": "https://<yourPortalUrl>/apps/opsdashboard/index.html#/4f539791b2f1418cb5403891f1a7be50"
   }
 ]
 
