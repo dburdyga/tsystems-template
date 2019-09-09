@@ -38,8 +38,16 @@
                 <article class="tile is-child notification is-light">
                   <p class="title">{{ post.image }}</p>
                   <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
-                  <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  <figure class="image image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                  </figure>
+                  <br>
+                  <figure class="image image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
+                  </figure>
+                  <br>
+                  <figure class="image image is-64x64">
+                    <img src="https://bulma.io/images/placeholders/64x64.png">
                   </figure>
                 </article>
               </div>
