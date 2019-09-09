@@ -44,6 +44,7 @@
                 <code class="subtitle">{{ post.codeSnippets }}</code>
                 <br></br>
                 <code class="subtitle">{{ post.codeSnippets }}</code>
+                <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>
               </article>
             </div>
           </div>
