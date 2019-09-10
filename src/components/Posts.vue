@@ -33,6 +33,14 @@
                   </div>
                   <p class="subtitle is-6">Credentials for read only account for Docker registry</p>
                 </article>
+                <article
+                  class="tile is-child notification has-background-grey-light"
+                  v-if="post.images">
+                  <p class="title is-4" >{{ post.images.image1 }}</p>
+                  <p class="title is-4">{{ post.images.image2 }}</p>
+                  <p class="title is-4">{{ post.images.image3 }}</p>
+                  <p class="subtitle is-6">List of images uploaded to Docker registry</p>
+                </article>
               </div>
               <div class="tile is-parent">
                 <article class="tile is-child notification has-background-grey-light">
@@ -40,16 +48,16 @@
                 </article>
               </div>
             </div>
-            <div class="tile is-parent">
-              <article
-                class="tile is-child notification has-background-grey-light"
-                v-if="post.images">
-                  <p class="title is-4" >{{ post.images.image1 }}</p>
-                  <p class="title is-4">{{ post.images.image2 }}</p>
-                  <p class="title is-4">{{ post.images.image3 }}</p>
-                <p class="subtitle is-6">List of images uploaded to Docker registry</p>
-              </article>
-            </div>
+<!--            <div class="tile is-parent">-->
+<!--              <article-->
+<!--                class="tile is-child notification has-background-grey-light"-->
+<!--                v-if="post.images">-->
+<!--                  <p class="title is-4" >{{ post.images.image1 }}</p>-->
+<!--                  <p class="title is-4">{{ post.images.image2 }}</p>-->
+<!--                  <p class="title is-4">{{ post.images.image3 }}</p>-->
+<!--                <p class="subtitle is-6">List of images uploaded to Docker registry</p>-->
+<!--              </article>-->
+<!--            </div>-->
           </div>
           <div class="tile is-parent is-vertical">
             <article class="tile is-child notification has-background-grey-lighter">
