@@ -3,10 +3,9 @@
       <p class="loading" v-if="loading"></p>
       <h1 class="title is-3" style="margin-bottom: 10px;">Environment info page</h1>
       <div class="tile"
-           v-for="post in posts"
-           :key="post.id"
       >
-        <div class="tile is-ancestor">
+        <div class="tile is-ancestor"
+        v-if="post">
           <div class="tile is-vertical is-8">
             <div class="tile">
               <div class="tile is-parent is-vertical">
@@ -76,9 +75,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { mapGetters } from 'vuex';
 import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
+import {IPost} from "@/shared/interfaces/IPost";
 
 export default Vue.extend({
   data() {
@@ -93,9 +92,12 @@ export default Vue.extend({
       .catch(() => this.loading = false);
   },
   computed: {
-    ...mapGetters({
-      posts: POSTS
-    })
+    posts(): IPost[] {
+      return this.$store.getters[POSTS];
+    },
+    post(): IPost {
+      return  this.posts[2]
+    }
   }
 });
 </script>
