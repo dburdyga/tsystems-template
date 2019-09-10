@@ -1,9 +1,7 @@
 <template>
     <div class="posts">
       <p class="loading" v-if="loading"></p>
-      <h1 class="title is-3">Environment info page</h1>
-      <div class="card">
-    </div>
+      <h1 class="title is-3" style="margin-bottom: 10px;">Environment info page</h1 class="title is-3">
       <div class="tile"
            v-for="post in posts"
            :key="post.id"
@@ -126,10 +124,10 @@ export default Vue.extend({
   to { -webkit-transform: rotate(360deg); }
 }
 .posts {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .card {
   margin-left: 50px;
