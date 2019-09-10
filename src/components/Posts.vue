@@ -37,8 +37,6 @@
               <div class="tile is-parent">
                 <article class="tile is-child notification has-background-grey-light">
                   <code class="subtitle is-7">{{ post.codeSnippets }}</code>
-                  <br></br>
-                  <code class="subtitle is-7">{{ post.codeSnippets }}</code>
                 </article>
               </div>
             </div>
