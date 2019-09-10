@@ -1,6 +1,10 @@
 export interface IPost {
   name: string;
-  version: string;
+  versions: {
+    versionStaxd: string;
+    versionMCC: string;
+    versionUI: string;
+  },
   addressDocker: string;
   addressBootnode: string;
   credentials:

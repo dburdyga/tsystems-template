@@ -1,7 +1,7 @@
 <template>
     <div class="posts">
       <p class="loading" v-if="loading"></p>
-      <h2 class="title is-2">Environment info page</h2>
+      <h1 class="title is-3">Environment info page</h1>
       <div class="card">
     </div>
       <div class="tile"
@@ -13,58 +13,66 @@
             <div class="tile">
               <div class="tile is-parent is-vertical">
                 <article class="tile is-child notification has-background-grey-lighter">
-                  <p class="title">{{ post.name }}</p>
+                  <p class="title is-4">{{ post.name }}</p>
                   <p class="subtitle">Environment name</p>
                 </article>
-                <article class="tile is-child notification has-background-grey-light">
-                  <p class="title">{{ post.version }}</p>
+                <article
+                  class="tile is-child notification has-background-grey-light"
+                  v-if="post.versions">
+                  <div class="content" style="margin-bottom: 0">
+                    <p class="title is-4">{{ post.versions.versionStaxd }}</p>
+                    <p class="title is-4">{{ post.versions.versionMCC }}</p>
+                    <p class="title is-4">{{ post.versions.versionUI}}</p>
+                  </div>
                   <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
                 </article>
                 <article
                   class="tile is-child notification has-background-grey-lighter"
                   v-if="post.credentials">
-                  <p class="title">{{ post.credentials.username }}</p>
-                  <p class="title">{{ post.credentials.password }}</p>
+                  <div class="content" style="margin-bottom: 0">
+                    <p class="title is-4">Username: {{ post.credentials.username }}</p>
+                    <p class="title is-4">Password: {{ post.credentials.password }}</p>
+                  </div>
                   <p class="subtitle">Credentials for read only account for Docker registry</p>
                 </article>
               </div>
               <div class="tile is-parent">
-                <article
-                  class="tile is-child notification has-background-grey-light"
-                  v-if="post.images">
-                  <p class="title">{{ post.images.image1 }}</p>
-                  <p class="title">{{ post.images.image2 }}</p>
-                  <p class="title">{{ post.images.image3 }}</p>
-                  <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
+                <article class="tile is-child notification has-background-grey-light">
+                  <code class="subtitle is-6">{{ post.codeSnippets }}</code>
+                  <br></br>
+                  <code class="subtitle is-6">{{ post.codeSnippets }}</code>
                 </article>
               </div>
             </div>
             <div class="tile is-parent">
-              <article class="tile is-child notification has-background-grey-light">
-                <code class="subtitle">{{ post.codeSnippets }}</code>
-                <br></br>
-                <code class="subtitle">{{ post.codeSnippets }}</code>
-<!--                <p class="subtitle">Code snippets for distribution repository configuration (deb, rpm for Staxd) for current environment</p>-->
+              <article
+                class="tile is-child notification has-background-grey-light"
+                v-if="post.images">
+                <div>
+                  <p class="title is-4" >{{ post.images.image1 }}</p>
+                  <p class="title is-4">{{ post.images.image2 }}</p>
+                  <p class="title is-4">{{ post.images.image3 }}</p>
+                </div>
+                <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
               </article>
             </div>
           </div>
           <div class="tile is-parent is-vertical">
             <article class="tile is-child notification has-background-grey-lighter">
-              <p class="title">{{ post.addressDocker }}</p>
+              <p class="title is-4">{{ post.addressDocker }}</p>
               <p class="subtitle">Address of Docker registry</p>
             </article>
             <article class="tile is-child notification has-background-grey-light">
-              <p class="title">{{ post.addressBootnode }}</p>
+              <p class="title is-4">{{ post.addressBootnode }}</p>
               <p class="subtitle">Address of bootnode</p>
             </article>
             <article class="tile is-child notification has-background-grey-lighter">
-              <p class="title">{{ post.zipUrl }}</p>
+              <p class="title is-4">{{ post.zipUrl }}</p>
               <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
             <article class="tile is-child notification has-background-grey-light">
-              <p class="title">{{ post.dashboardUrl }}</p>
+              <p class="title is-4">{{ post.dashboardUrl }}</p>
               <p class="subtitle">Logging dashboard URL</p>
-              <div class="content"></div>
             </article>
           </div>
         </div>
@@ -143,5 +151,9 @@ export default Vue.extend({
 }
 .title {
   font-weight: bold;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
 }
 </style>
