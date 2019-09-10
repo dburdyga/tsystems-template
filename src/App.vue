@@ -4,7 +4,7 @@
     <div class="view">
       <router-view/>
     </div>
-    <Footer v-if="$route.name !== 'vue-telekom'"/>
+<!--    <Footer v-if="$route.name !== 'vue-telekom'"/>-->
   </div>
 </template>
 

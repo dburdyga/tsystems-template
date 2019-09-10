@@ -14,33 +14,33 @@
               <div class="tile is-parent is-vertical">
                 <article class="tile is-child notification has-background-grey-lighter">
                   <p class="title is-4">{{ post.name }}</p>
-                  <p class="subtitle">Environment name</p>
+                  <p class="subtitle is-6">Environment name</p>
                 </article>
                 <article
                   class="tile is-child notification has-background-grey-light"
                   v-if="post.versions">
-                  <div class="content" style="margin-bottom: 0">
+                  <div class="content" style="margin-bottom: -20px;">
                     <p class="title is-4">{{ post.versions.versionStaxd }}</p>
                     <p class="title is-4">{{ post.versions.versionMCC }}</p>
                     <p class="title is-4">{{ post.versions.versionUI}}</p>
                   </div>
-                  <p class="subtitle">List of versions for main components (Staxd, MCC, UI)</p>
+                  <p class="subtitle is-6">List of versions for main components</p>
                 </article>
                 <article
                   class="tile is-child notification has-background-grey-lighter"
                   v-if="post.credentials">
-                  <div class="content" style="margin-bottom: 0">
+                  <div class="content" style="margin-bottom: -20px;">
                     <p class="title is-4">Username: {{ post.credentials.username }}</p>
                     <p class="title is-4">Password: {{ post.credentials.password }}</p>
                   </div>
-                  <p class="subtitle">Credentials for read only account for Docker registry</p>
+                  <p class="subtitle is-6">Credentials for read only account for Docker registry</p>
                 </article>
               </div>
               <div class="tile is-parent">
                 <article class="tile is-child notification has-background-grey-light">
-                  <code class="subtitle is-6">{{ post.codeSnippets }}</code>
+                  <code class="subtitle is-7">{{ post.codeSnippets }}</code>
                   <br></br>
-                  <code class="subtitle is-6">{{ post.codeSnippets }}</code>
+                  <code class="subtitle is-7">{{ post.codeSnippets }}</code>
                 </article>
               </div>
             </div>
@@ -48,35 +48,32 @@
               <article
                 class="tile is-child notification has-background-grey-light"
                 v-if="post.images">
-                <div>
                   <p class="title is-4" >{{ post.images.image1 }}</p>
                   <p class="title is-4">{{ post.images.image2 }}</p>
                   <p class="title is-4">{{ post.images.image3 }}</p>
-                </div>
-                <p class="subtitle">List of images uploaded to Docker registry (with tags)</p>
+                <p class="subtitle is-6">List of images uploaded to Docker registry (with tags)</p>
               </article>
             </div>
           </div>
           <div class="tile is-parent is-vertical">
             <article class="tile is-child notification has-background-grey-lighter">
               <p class="title is-4">{{ post.addressDocker }}</p>
-              <p class="subtitle">Address of Docker registry</p>
+              <p class="subtitle is-6">Address of Docker registry</p>
             </article>
             <article class="tile is-child notification has-background-grey-light">
               <p class="title is-4">{{ post.addressBootnode }}</p>
-              <p class="subtitle">Address of bootnode</p>
+              <p class="subtitle is-6">Address of bootnode</p>
             </article>
             <article class="tile is-child notification has-background-grey-lighter">
               <p class="title is-4">{{ post.zipUrl }}</p>
-              <p class="subtitle">URL for Zip builds downloads (UI, Staxd)</p>
+              <p class="subtitle is-6">URL for Zip builds downloads (UI, Staxd)</p>
             </article>
             <article class="tile is-child notification has-background-grey-light">
               <p class="title is-4">{{ post.dashboardUrl }}</p>
-              <p class="subtitle">Logging dashboard URL</p>
+              <p class="subtitle is-6">Logging dashboard URL</p>
             </article>
           </div>
         </div>
-        <span></span>
       </div>
   </div>
 </template>
@@ -140,14 +137,6 @@ export default Vue.extend({
   margin-top: 20px;
   text-align: left;
   box-shadow: none;
-}
-.header {
-  font-size: 28px;
-  font-weight: bold;
-  color: #41b883;
-  margin-bottom: 15px;
-  text-align: center;
-  margin-top: 15px;
 }
 .title {
   font-weight: bold;
