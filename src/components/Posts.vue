@@ -96,7 +96,7 @@ export default Vue.extend({
       return this.$store.getters[POSTS];
     },
     post(): IPost {
-      return  this.posts[2]
+      return this.posts[2]
     }
   }
 });
