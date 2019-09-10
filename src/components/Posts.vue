@@ -49,7 +49,7 @@
                   <p class="title is-4" >{{ post.images.image1 }}</p>
                   <p class="title is-4">{{ post.images.image2 }}</p>
                   <p class="title is-4">{{ post.images.image3 }}</p>
-                <p class="subtitle is-6">List of images uploaded to Docker registry (with tags)</p>
+                <p class="subtitle is-6">List of images uploaded to Docker registry</p>
               </article>
             </div>
           </div>
