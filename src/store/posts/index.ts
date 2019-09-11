@@ -8,7 +8,7 @@ interface IPostState {
   posts: IPost[];
 }
 
-const myRequest = new Request('./posts.json');
+const myRequest = new Request('./environments.json');
 
 const postState: Module<IPostState, {}> = {
   state: {
