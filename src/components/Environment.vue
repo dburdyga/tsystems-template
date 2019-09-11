@@ -1,5 +1,5 @@
 <template>
-    <div class="posts">
+    <div class="environments">
       <p class="loading" v-if="loading"></p>
       <h1 class="title is-3" style="margin-bottom: 10px;">Environment info page</h1>
       <div class="tile"
@@ -124,7 +124,7 @@ export default Vue.extend({
 @-webkit-keyframes spin {
   to { -webkit-transform: rotate(360deg); }
 }
-.posts {
+.environments {
   margin-bottom: 10px;
   margin-left: 20px;
   margin-right: 20px;

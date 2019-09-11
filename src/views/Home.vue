@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Posts from '@/components/Posts.vue'; // @ is an alias to /src
+import Posts from '@/components/Environment.vue'; // @ is an alias to /src
 
 export default Vue.extend({
   name: 'home',
