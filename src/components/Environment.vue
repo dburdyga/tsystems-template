@@ -46,6 +46,7 @@
                   <code class="subtitle is-7">{{ post.codeSnippets }}</code>
                   <br></br>
                   <code class="subtitle is-7">{{ post.codeSnippets }}</code>
+                  <br></br>
                   <p class="subtitle is-6">Code snippets for distribution repository configuration</p>
                 </article>
               </div>
