@@ -46,6 +46,7 @@
                   <code class="subtitle is-7">{{ post.codeSnippets }}</code>
                   <br></br>
                   <code class="subtitle is-7">{{ post.codeSnippets }}</code>
+                  <p class="subtitle is-6">Code snippets for distribution repository configuration</p>
                 </article>
               </div>
             </div>
@@ -77,7 +78,7 @@
 import Vue from 'vue';
 import {FETCH_POSTS} from '@/store/posts/action-types';
 import {POSTS} from '@/store/posts/getter-types';
-import {IPost} from "@/shared/interfaces/IPost";
+import {IPost} from '@/shared/interfaces/IPost';
 
 export default Vue.extend({
   data() {
@@ -96,7 +97,7 @@ export default Vue.extend({
       return this.$store.getters[POSTS];
     },
     post(): IPost {
-      return this.posts[2]
+      return this.posts[2];
     }
   }
 });
