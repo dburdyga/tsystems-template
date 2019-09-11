@@ -24,7 +24,7 @@
   },
   {
     "id": "2",
-    "name": "Dev",
+    "name": "Demo",
     "versions": {
       "versionStaxd": "Staxd 1.1",
       "versionMCC": "MCC 0.1.1",
@@ -47,7 +47,7 @@
   },
   {
     "id": "3",
-    "name": "Demo",
+    "name": "Dev",
     "versions": {
       "versionStaxd": "Staxd 1.1",
       "versionMCC": "MCC 0.1.1",
