@@ -8,15 +8,13 @@ interface IPostState {
   posts: IPost[];
 }
 
-const myRequest = new Request('./environments.json');
-
 const postState: Module<IPostState, {}> = {
   state: {
     posts: []
   },
   actions: {
     [FETCH_POSTS]({commit}) {
-      return fetch('posts.json')
+      return fetch('environments.json')
         .then(res => res.json())
         .then(posts => commit('SET_POSTS', posts))
         .catch(err => console.log(err));

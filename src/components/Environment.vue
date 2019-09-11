@@ -105,7 +105,7 @@ export default Vue.extend({
 </script>
 
 <style scoped lang="scss">
-@import '../common/vue-telekom/styles/base/variables';
+
 .loading {
   display: inline-block;
   position: absolute;
