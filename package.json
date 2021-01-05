@@ -10,7 +10,7 @@
     "test:e2e": "vue-cli-service test:e2e --config nightwatch.config.js"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "buefy": "^0.8.2",
     "bulma": "^0.7.1",
     "vue": "^2.5.16",
